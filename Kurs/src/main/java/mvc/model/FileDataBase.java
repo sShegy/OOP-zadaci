@@ -7,9 +7,10 @@ import java.util.*;
 public class FileDataBase {
     private static FileDataBase instance;
 
-    private final String Kurs="RAF_Coursera.txt";
+    private final String Kurs="/Users/shegy/Documents/OOP-zadaci/Kurs/RAF_Coursera.txt";
 
     private static int Dzeparac=1000;
+    private int ime;
 
     private List<Kurs>odabranikurs=new ArrayList<>();
     private List<Kategorija>dadada=new ArrayList<>();
