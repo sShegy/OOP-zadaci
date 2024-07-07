@@ -43,12 +43,14 @@ public class BrnOdgledaj implements EventHandler<ActionEvent> {
         //----------------------------------------------------------
         LocalDateTime start=LocalDateTime.of(localDate,localTime);
         Integer kolikosegledaMIn=Integer.parseInt(mainStage.getTxTrajanjeAktivnosti().getText());
+
         if (kolikosegledaMIn>120){
             Alert alert=new Alert(Alert.AlertType.ERROR,"Sadrzi vise od 120 minuta");
             alert.showAndWait();
             mainStage.getLbStaseTrenutnogleda().setText("Uneli ste vise od 120 minuta");
             return;
         }
+        //----------------------------------------------------------
         LocalDateTime end=start.plusMinutes(kolikosegledaMIn);
         String krajdatum=getDatum(end);
         String krajSati=getSati(end);
@@ -60,6 +62,7 @@ public class BrnOdgledaj implements EventHandler<ActionEvent> {
             mainStage.getLbStaseTrenutnogleda().setText("Vec Ste dodali ovaj : "+e);
 
         }
+        //----------------------------------------------------------
         mainStage.insertKategorije(fileDataBase.getKategorija());
         mainStage.getTvKursStaseGleda().refresh();
         mainStage.getCbMinuti().getSelectionModel().select(0);

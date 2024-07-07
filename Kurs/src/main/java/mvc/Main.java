@@ -18,6 +18,5 @@ public class Main extends Application {
         mainStage.insertSate(fileDataBase.getSate());
         mainStage.insertMinute(fileDataBase.getMinute());
         mainStage.show();
-        System.out.println("ok");
     }
 }

@@ -20,7 +20,7 @@ public class MainStage extends Stage {
 
     private Label lbrafCursera = new Label("RAF Cursera");
 
-    private Label lbRaspolozivo = new Label("Raspolozivo");
+    private Label lbRaspolozivo = new Label("Raspolozivo: ");
     private Label lbRaspolozivoStaje = new Label();
 
     private Label lbDostupniKursevi = new Label("Dostupni kursevi");

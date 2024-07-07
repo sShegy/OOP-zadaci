@@ -71,9 +71,6 @@ public class FileDataBase {
         return sat;
     }
 
-
-
-
     private void ucitajKurs(){
         try {
             FileReader fr=new FileReader(Kurs);
@@ -93,12 +90,7 @@ public class FileDataBase {
         }
 
     }
-    public static String getSati(LocalDateTime time){
-        return time.getHour()+":"+time.getMinute();
-    }
-    public static String getDatum(LocalDateTime time){
-        return time.toLocalDate().format(DateTimeFormatter.ofPattern("dd-MM-yyyy"));
-    }
+
     public void dodatikurs(Kurs kurs){
         odabranikurs.add(kurs);
     }
@@ -118,5 +110,9 @@ public class FileDataBase {
 
     public List<Kategorija> getDadada() {
         return dadada;
+    }
+
+    public int getIme() {
+        return ime;
     }
 }
