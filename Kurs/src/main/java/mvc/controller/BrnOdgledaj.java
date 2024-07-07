@@ -34,7 +34,7 @@ public class BrnOdgledaj implements EventHandler<ActionEvent> {
         String kategorija=mainStage.getLvOdKurseva().getSelectionModel().getSelectedItem().getKategorija();
         //----------------------------------------------------------
         Integer pocetakSt=mainStage.getCbSati().getSelectionModel().getSelectedItem();
-        Integer pocetakMin=mainStage.getCbSati().getSelectionModel().getSelectedItem();
+        Integer pocetakMin=mainStage.getCbMinuti().getSelectionModel().getSelectedItem();
         //----------------------------------------------------------
         LocalTime localTime=LocalTime.of(pocetakSt,pocetakMin);
         //----------------------------------------------------------
