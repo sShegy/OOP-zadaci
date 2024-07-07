@@ -19,7 +19,7 @@ public class BtnSnimi implements EventHandler<ActionEvent> {
     @Override
     public void handle(ActionEvent actionEvent) {
         try {
-            File fr=new File("glnrtyo.txt");
+            File fr=new File("ispisi.txt");
             FileWriter fw=new FileWriter(fr);
             BufferedWriter bw=new BufferedWriter(fw);
 
