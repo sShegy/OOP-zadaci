@@ -2,14 +2,18 @@ package mvc.model;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 public class FileDataBase {
     private static FileDataBase instance;
 
-    private final String Kurs="/Users/shegy/Documents/OOP-zadaci/Kurs/RAF_Coursera.txt";
+    private final String Kurs="C:\\Users\\computer\\OneDrive\\Desktop\\OOP\\OOP-zadaci\\Kurs\\RAF_Coursera.txt";
 
-    private static int Dzeparac=1000;
+    private static int Dzeparac;
     private int ime;
 
     private List<Kurs>odabranikurs=new ArrayList<>();
@@ -19,6 +23,7 @@ public class FileDataBase {
     private FileDataBase() {
 
         ucitajKurs();
+        Dzeparac=1000;
 
     }
     public static FileDataBase getInstance(){
@@ -35,10 +40,18 @@ public class FileDataBase {
         }
             return false;
     }
+    public boolean Kategorijaexist(Kategorija t){
+        for (Kategorija k:dadada){
+            if (k.getNaziv().equals(t.getNaziv())){
+                return true;
+            }
+        }
+        return false;
+    }
 
     public Collection<Integer>getSate(){
         Set<Integer>sat=new LinkedHashSet<>();
-        for (int i=1;i<=24;i++){
+        for (int i=1;i<24;i++){
             sat.add(i);
         }
         return sat;
@@ -57,10 +70,7 @@ public class FileDataBase {
         }
         return sat;
     }
-    public int uzmiDzeparac(Integer i){
-        Dzeparac-=i;
-        return Dzeparac;
-    }
+
 
 
 
@@ -83,8 +93,17 @@ public class FileDataBase {
         }
 
     }
+    public static String getSati(LocalDateTime time){
+        return time.getHour()+":"+time.getMinute();
+    }
+    public static String getDatum(LocalDateTime time){
+        return time.toLocalDate().format(DateTimeFormatter.ofPattern("dd-MM-yyyy"));
+    }
     public void dodatikurs(Kurs kurs){
         odabranikurs.add(kurs);
+    }
+    public void dodatiKategoriju(Kategorija kurs){
+        dadada.add(kurs);
     }
 
 
@@ -96,10 +115,6 @@ public class FileDataBase {
         return odabranikurs;
     }
 
-    public int getDzeparac(Integer i) {
-        Dzeparac=Dzeparac-i;
-        return Dzeparac;
-    }
 
     public List<Kategorija> getDadada() {
         return dadada;

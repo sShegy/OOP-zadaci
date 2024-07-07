@@ -9,6 +9,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import mvc.controller.BrnOdgledaj;
 import mvc.controller.BtnDodajKurs;
+import mvc.controller.BtnSnimi;
 import mvc.model.Kategorija;
 import mvc.model.Kurs;
 
@@ -59,13 +60,23 @@ public class MainStage extends Stage {
 
         btnDodajKurs.setOnAction(new BtnDodajKurs(this));
         btnOdgledaj.setOnAction(new BrnOdgledaj(this));
+        btnSnimiAktivnost.setOnAction(new BtnSnimi(this));
 
         TableColumn<Kategorija, String> tcNaziv = new TableColumn<>("Naziv");
         tcNaziv.setCellValueFactory(new PropertyValueFactory<>("naziv"));
         TableColumn<Kategorija, String> tcKategorija = new TableColumn<>("Kategorija");
         tcKategorija.setCellValueFactory(new PropertyValueFactory<>("kategorija"));
+        TableColumn<Kategorija,String >tcPocetakDt=new TableColumn<>("Pocetak(Datum)");
+        tcPocetakDt.setCellValueFactory(new PropertyValueFactory<>("pocetakdt"));
+        TableColumn<Kategorija,String > tcPocetakVR =new TableColumn<>("Pocetak(Datum)");
+        tcPocetakVR.setCellValueFactory(new PropertyValueFactory<>("pocetakvr"));
+        TableColumn<Kategorija,String > tcKrajDt =new TableColumn<>("Pocetak(Datum)");
+        tcKrajDt.setCellValueFactory(new PropertyValueFactory<>("krajdt"));
+        TableColumn<Kategorija,String > tcKrajVr =new TableColumn<>("Pocetak(Datum)");
+        tcKrajVr.setCellValueFactory(new PropertyValueFactory<>("krajvr"));
 
-        tvKursStaseGleda.getColumns().addAll(tcNaziv, tcKategorija);
+
+        tvKursStaseGleda.getColumns().addAll(tcNaziv, tcKategorija,tcPocetakDt,tcPocetakVR,tcKrajDt,tcKrajVr);
 
         VBox vb1 = new VBox();
         vb1.setAlignment(Pos.CENTER);
@@ -95,12 +106,12 @@ public class MainStage extends Stage {
         VBox vb3 = new VBox();
         vb3.setAlignment(Pos.CENTER);
         vb3.setSpacing(5);
-        vb3.getChildren().addAll(lbPocetakAktivnosti, hb1, lbTrajanjeAktiv, hb4, btnOdgledaj, lbStaseTrenutnogleda);
+        vb3.getChildren().addAll(lbPocetakAktivnosti, hb1, lbTrajanjeAktiv, hb2, btnOdgledaj, lbStaseTrenutnogleda);
 
         HBox root1 = new HBox();
         root1.setAlignment(Pos.CENTER);
         root1.setSpacing(5);
-        root1.getChildren().addAll(vb1, btnDodajKurs, vb2, vb3);
+        root1.getChildren().addAll(vb1,btnDodajKurs,  vb2, vb3);
 
         VBox root = new VBox();
         root.setAlignment(Pos.CENTER);
@@ -155,5 +166,25 @@ public class MainStage extends Stage {
 
     public ListView<Kurs> getLvOdKurseva() {
         return lvOdKurseva;
+    }
+
+    public Button getBtnDodajKurs() {
+        return btnDodajKurs;
+    }
+
+    public ChoiceBox<Integer> getCbMinuti() {
+        return cbMinuti;
+    }
+
+    public ChoiceBox<Integer> getCbSati() {
+        return cbSati;
+    }
+
+    public TextField getTxTrajanjeAktivnosti() {
+        return txTrajanjeAktivnosti;
+    }
+
+    public TableView<Kategorija> getTvKursStaseGleda() {
+        return tvKursStaseGleda;
     }
 }
