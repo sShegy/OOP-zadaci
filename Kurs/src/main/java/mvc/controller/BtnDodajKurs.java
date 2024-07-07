@@ -37,9 +37,10 @@ public class BtnDodajKurs implements EventHandler<ActionEvent> {
                 return;
             }else {
                 broje=String.valueOf(broj-cena);
+                mainStage.getLbRaspolozivoStaje().setText(broje);
                 Alert alert=new Alert(Alert.AlertType.CONFIRMATION,"Imate dovoljno para na racunu, trenutno stanje: "+broje);
                 alert.showAndWait();
-                mainStage.getLbRaspolozivoStaje().setText(broje);
+
             }
         }else {
             mainStage.getLbStaseTrenutnogleda().setText("Vec ste izabrati taj film"+e);
