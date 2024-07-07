@@ -43,7 +43,7 @@ public class BtnDodajKurs implements EventHandler<ActionEvent> {
 
             }
         }else {
-            mainStage.getLbStaseTrenutnogleda().setText("Vec ste izabrati taj film"+e);
+            mainStage.getLbStaseTrenutnogleda().setText("Vec ste izabrali taj film"+e);
         }
 
         mainStage.insertKurslista(fileDataBase.getOdabranikurs());
