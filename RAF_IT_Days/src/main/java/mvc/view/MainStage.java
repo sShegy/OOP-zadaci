@@ -10,6 +10,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import mvc.controller.BtnDodaj;
 import mvc.controller.BtnFilter;
+import mvc.controller.BtnSacuvaj;
 import mvc.model.Kategorija;
 import mvc.model.Predavac;
 import mvc.model.Teme;
@@ -52,6 +53,7 @@ public class MainStage extends Stage {
     private void init() {
         btnFilter.setOnAction(new BtnFilter(this));
         btnDodaj.setOnAction(new BtnDodaj(this));
+        btnSacuvaj.setOnAction(new BtnSacuvaj(this));
 
 
         cbDani.getItems().addAll("Prvi dan", "Drugi dan", "Treci dan", "Cetvrti dan");

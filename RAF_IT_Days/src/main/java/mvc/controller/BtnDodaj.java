@@ -54,7 +54,7 @@ public class BtnDodaj implements EventHandler<ActionEvent> {
             Kategorija k = new Kategorija(dan, predavanje, predavac, tema, vreme, kategorija);
             fileDataBase.getKategorijeubazu(k);
             showAlert("Kategorija uspesno dodata!");
-            mainStage.insertKategorija(fileDataBase.getKategorijatv());
+            mainStage.insertKategorija(fileDataBase.getKategorija());
             mainStage.getTvKategorija().refresh();
         }
     }

@@ -41,4 +41,16 @@ public class Kategorija {
     public String getVrsta() {
         return vrsta;
     }
+
+    @Override
+    public String toString() {
+        return "Kategorija{" +
+                "dan='" + dan + '\'' +
+                ", tema='" + tema + '\'' +
+                ", predavac='" + predavac + '\'' +
+                ", kompanija='" + kompanija + '\'' +
+                ", vreme=" + vreme +
+                ", vrsta='" + vrsta + '\'' +
+                '}';
+    }
 }
