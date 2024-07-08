@@ -17,8 +17,6 @@ public class Main extends Application {
         mainStage.getCbOblast().getSelectionModel().select("Sve oblasti");
         mainStage.insertLvPredavac(fileDataBase.getPredavac());
         mainStage.insertLvTeme(fileDataBase.getTeme());
-
-
         mainStage.show();
     }
 }
