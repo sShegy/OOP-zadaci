@@ -19,7 +19,7 @@ public class BtnDodaj implements EventHandler<ActionEvent> {
     public void handle(ActionEvent actionEvent) {
         String dan = mainStage.getCbDani().getSelectionModel().getSelectedItem();
         String predavanje = mainStage.getCbPreVez().getSelectionModel().getSelectedItem();
-        Integer vreme = parseInteger(mainStage.getTxVreme().getText());
+        Integer vreme = Integer.parseInt(mainStage.getTxVreme().getText());
         String predavac = mainStage.getLvPredavac().getSelectionModel().getSelectedItem().toString();
         String tema = mainStage.getLvTeme().getSelectionModel().getSelectedItem().toString();
         String kategorija = mainStage.getLvPredavac().getSelectionModel().getSelectedItem().toString();
@@ -64,12 +64,5 @@ public class BtnDodaj implements EventHandler<ActionEvent> {
         alert.showAndWait();
     }
 
-    private Integer parseInteger(String text) {
-        try {
-            return Integer.parseInt(text);
-        } catch (NumberFormatException e) {
-            showAlert("Unesite validan broj za vreme!");
-            return null;
-        }
-    }
+
 }
