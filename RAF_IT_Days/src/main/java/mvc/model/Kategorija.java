@@ -51,6 +51,6 @@ public class Kategorija {
                 ", kompanija='" + kompanija + '\'' +
                 ", vreme=" + vreme +
                 ", vrsta='" + vrsta + '\'' +
-                '}';
+                '}'+"\n";
     }
 }

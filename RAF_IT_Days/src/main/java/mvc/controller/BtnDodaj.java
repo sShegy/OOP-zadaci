@@ -45,6 +45,9 @@ public class BtnDodaj implements EventHandler<ActionEvent> {
                 showAlert("Nevalidan dan!");
                 break;
         }
+        mainStage.getCbDani().getSelectionModel().select(0);
+        mainStage.getCbPreVez().getSelectionModel().select(0);
+        mainStage.getTxVreme().clear();
     }
 
     private void handleEventWithinDay(String dan, String predavanje, int vreme, String predavac, String tema, String kategorija) {

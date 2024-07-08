@@ -25,6 +25,8 @@ public class BtnSacuvaj implements EventHandler<ActionEvent> {
             for (Kategorija k: fileDataBase.getKategorija()){
                 bw.write(k.toString());
             }
+            bw.close();
+            fw.close();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
