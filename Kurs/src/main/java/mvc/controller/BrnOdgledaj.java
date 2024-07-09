@@ -59,8 +59,7 @@ public class BrnOdgledaj implements EventHandler<ActionEvent> {
         if (!fileDataBase.Kategorijaexist(k)){
             fileDataBase.dodatiKategoriju(k);
         }else {
-            mainStage.getLbStaseTrenutnogleda().setText("Vec Ste dodali ovaj : "+e);
-
+            mainStage.getLbStaseTrenutnogleda().setText("Vec Ste dodali ovaj : "+ e);
         }
         //----------------------------------------------------------
         mainStage.insertKategorije(fileDataBase.getKategorija());
