@@ -31,9 +31,7 @@ public class FileDataBase {
     public void getKategorijalv(Kategorija k){
         kategorija.add(k);//dodaj Kategoriju u listu katagoriju
     }
-    public void removePredavac(Predavac k){
-        kategorija.remove(k);
-    }
+
     public void removerTema(Teme k){
         teme.remove(k);
     }
