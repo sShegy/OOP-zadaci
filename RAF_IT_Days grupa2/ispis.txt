@@ -1,0 +1,2 @@
+Kategorija{dan='Prvi dan', tema='Primena Veštačke Inteligencije u Igrama', predavac='JaksicJaksa-Databricks', kompanija='Predavanje', vreme=10, vrsta='JaksicJaksa-Databricks'}
+Kategorija{dan='Prvi dan', tema='Integracija AI u Različite Sisteme', predavac='RisticRista-Symphony', kompanija='Predavanje', vreme=10, vrsta='RisticRista-Symphony'}

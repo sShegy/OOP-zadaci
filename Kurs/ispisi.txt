@@ -1,0 +1,2 @@
+Kategorija{kategorija='Technology', naziv='Introduction to Web Development', pocetakdt=2024-07-09, pocetakvr=06:25, krajdt='2024-07-09', krajvr='8:5'}
+Kategorija{kategorija='Health and Fitness', naziv='Yoga for Beginners', pocetakdt=2024-07-09, pocetakvr=01:00, krajdt='2024-07-09', krajvr='1:10'}

@@ -1,0 +1,20 @@
+Napredne Tehnike Backend Razvoja;Backend,DevOps,Cloud
+UI/UX Dizajn za Mobilne Aplikacije;UI/UX,Mobile Development,Frontend
+Primena Veštačke Inteligencije u Igrama;Gaming,AI,Machine Learning
+Cloud Rešenja za Velike Sisteme;Cloud,DevOps,Data Engineering
+Sigurnost u Web Razvoju;Web Development,Security,Backend
+Analiza Podataka za Poslovne Odluke;Data Science,Analytics,Big Data
+Efikasno Upravljanje Projektima u IT Industriji;Project Management,Consulting,Quality Assurance
+Razvoj Fullstack Aplikacija;Fullstack,Frontend,Backend
+Kreiranje Optimizovanih Mobilnih Aplikacija;Mobile Development,UI/UX,Security
+Integracija AI u Različite Sisteme;AI,Machine Learning,Cloud
+Savremene Metodologije za Upravljanje Podacima;Big Data,Data Engineering,Analytics
+Igre kao Platforma za Edukaciju;Gaming,Backend,UI/UX
+Razvoj Sigurnih Mrežnih Aplikacija;Networks,Security,DevOps
+Transformacija Poslovanja uz Pomoć Machine Learning-a;Machine Learning,Data Science,Consulting
+Izazovi i Rešenja u Razvoju Web Aplikacija;Web Development,Fullstack,Security
+Unapređenje Kvaliteta Softvera;Quality Assurance,DevOps,Project Management
+Uloga Cloud Tehnologija u Modernom Biznisu;Cloud,Big Data,Data Engineering
+Razvoj Interaktivnih i Privlačnih Interfejsa;UI/UX,Frontend,Mobile Development
+Optimizacija Backend Servisa za Skalabilnost;Backend,Cloud,DevOps
+Primena Machine Learning-a u Analitici;Machine Learning,Data Science,Analytics
