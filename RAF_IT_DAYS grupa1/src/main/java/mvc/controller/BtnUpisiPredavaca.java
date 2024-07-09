@@ -21,7 +21,8 @@ public class BtnUpisiPredavaca implements EventHandler<ActionEvent> {
         String predavac=mainStage.getTvPredavaci().getSelectionModel().getSelectedItem().getPred();
         String naziv=mainStage.getLvTeme().getSelectionModel().getSelectedItem().getNaslov();
         List<String> oblast = mainStage.getLvTeme().getSelectionModel().getSelectedItem().getOblast();
-        Kategorija k=new Kategorija(naziv,oblast,predavac);
+        String kompanija=mainStage.getTvPredavaci().getSelectionModel().getSelectedItem().getKompanija();
+        Kategorija k=new Kategorija(naziv,oblast,predavac,kompanija);
         fileDataBase.getKategorijalv(k);
         mainStage.insertKategorija(fileDataBase.getKategorija());
         mainStage.getTvKategorija().refresh();

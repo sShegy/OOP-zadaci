@@ -16,6 +16,5 @@ public class Main extends Application {
         mainStage.insertPredavac(f.getPredavac());
         mainStage.insertTeme(f.getTeme());
         mainStage.show();
-
     }
 }
