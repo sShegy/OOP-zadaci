@@ -30,7 +30,6 @@ public class BtnDodajKurs implements EventHandler<ActionEvent> {
 
 
         if (!fileDataBase.Kursexist(k)){
-            fileDataBase.dodatikurs(k);
             if ((broj-cena)<0) {
                 Alert alert=new Alert(Alert.AlertType.ERROR,"Nemate dovoljno u kasi");
                 alert.showAndWait();
@@ -40,7 +39,7 @@ public class BtnDodajKurs implements EventHandler<ActionEvent> {
                 mainStage.getLbRaspolozivoStaje().setText(broje);
                 Alert alert=new Alert(Alert.AlertType.CONFIRMATION,"Imate dovoljno para na racunu, trenutno stanje: "+broje);
                 alert.showAndWait();
-
+                fileDataBase.dodatikurs(k);
             }
         }else {
             mainStage.getLbStaseTrenutnogleda().setText("Vec ste izabrali taj film"+e);
