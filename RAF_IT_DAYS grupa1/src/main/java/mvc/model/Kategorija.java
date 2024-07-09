@@ -2,7 +2,7 @@ package mvc.model;
 
 import java.util.List;
 
-public class Kategorija {
+public class Kategorija implements Comparable<Kategorija> {
     private String predavac;
     private String naziv;
     private List<String> oblast;
@@ -35,5 +35,10 @@ public class Kategorija {
                 ", oblast=" + oblast +
                 ", predavaci='" + predavaci + '\'' +
                 '}'+"\n";
+    }
+
+    @Override
+    public int compareTo(Kategorija o) {
+        return this.predavac.compareTo(o.predavac);
     }
 }

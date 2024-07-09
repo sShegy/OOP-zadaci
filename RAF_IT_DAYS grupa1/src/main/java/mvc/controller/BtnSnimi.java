@@ -10,6 +10,8 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Collection;
+import java.util.Collections;
 
 public class BtnSnimi implements EventHandler<ActionEvent> {
     private MainStage mainStage;
@@ -24,6 +26,8 @@ public class BtnSnimi implements EventHandler<ActionEvent> {
             File fr=new File("izlaz.txt");
             FileWriter fw=new FileWriter(fr);
             BufferedWriter bw=new BufferedWriter(fw);
+            Collections.sort(fileDataBase.getKategorija());
+            // fileDataBase.getKategorija().sort(null);
             for (Kategorija k: fileDataBase.getKategorija()){
                 bw.write(k.toString());
             }
