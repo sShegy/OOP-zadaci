@@ -47,7 +47,7 @@ public class FileDataBase {
         }
     }
     public Collection<Vozila>getVozila(){
-        Set<Vozila>res=new LinkedHashSet<>();
+        Set<Vozila>res=new HashSet<>();
         for (Vozila v: vozila){
             res.add(v);
         }

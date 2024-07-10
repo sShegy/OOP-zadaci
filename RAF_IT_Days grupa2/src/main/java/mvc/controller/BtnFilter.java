@@ -21,7 +21,7 @@ public class BtnFilter implements EventHandler<ActionEvent> {
             mainStage.insertLvPredavac(fileDataBase.getPredavac());
             mainStage.getLvPredavac().refresh();
             mainStage.getLvTeme().refresh();
-        }else if (oblast!="Sve oblasti"){
+        }else {
             mainStage.insertLvPredavac(fileDataBase.getPredmetFilter(oblast));
             mainStage.insertLvTeme(fileDataBase.getTemeFilter(oblast));
             mainStage.getLvPredavac().refresh();
