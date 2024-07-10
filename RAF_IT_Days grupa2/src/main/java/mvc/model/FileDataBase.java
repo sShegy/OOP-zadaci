@@ -14,7 +14,7 @@ public class FileDataBase {
 
     private List<Predavac> predavac = new ArrayList<>();
     private List<Teme> teme = new ArrayList<>();
-    private  List<Kategorija> kategorija = new ArrayList<>();
+    private List<Kategorija> kategorija = new ArrayList<>();
 
     private FileDataBase() {
         ucitajPredavaca();

@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="070b8680-054b-40df-9d85-2f12d5585e4e" name="Changes" comment="." />
+    <list default="true" id="070b8680-054b-40df-9d85-2f12d5585e4e" name="Changes" comment=".">
+      <change beforePath="$PROJECT_DIR$/../Kurs/.idea/discord.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Kurs/.idea/discord.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RAF_IT_Days grupa2/.idea/discord.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RAF_IT_Days grupa2/.idea/discord.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RAF_IT_Days grupa2/src/main/java/mvc/model/FileDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RAF_IT_Days grupa2/src/main/java/mvc/model/FileDataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Raspored_casova_RAF/src/main/java/mvc/model/FileDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Raspored_casova_RAF/src/main/java/mvc/model/FileDataBase.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
