@@ -4,19 +4,23 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class FileDataBase {
     private static FileDataBase instance;
 
     private final String USER_FILE = "User.txt";
+    private final String Currency_FILE = "Currency.txt";
 
     private List<User> user = new ArrayList<>();
+    private List<Currency> currencie = new ArrayList<>();
 
     private FileDataBase() {
         ucitajUsers();
+        ucitajCurrency();
     }
+
+
 
     public static FileDataBase getInstance() {
         if (instance == null) {
@@ -73,7 +77,31 @@ public class FileDataBase {
             e.printStackTrace();
         }
     }
+    private void ucitajCurrency() {
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(Currency_FILE));
+            String line = br.readLine();
+            while (line!=null){
+                Currency c=Currency.getCurrency(line);
+                currencie.add(c);
+                line= br.readLine();
+            }
 
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+
+    }
+    public Collection<String>getDrzave(){
+        Set<String>res=new LinkedHashSet<>();
+        for (Currency c:currencie){
+            res.add(c.getDrzava());
+        }
+        return res;
+    }
 
     public boolean emailExists(User u) {
         for (User t : user) {
@@ -82,5 +110,35 @@ public class FileDataBase {
             }
         }
         return false;
+    }
+    public String getValueCurrency(String s){
+        for (Currency c:currencie){
+            if (c.getDrzava().equals(s)){
+                return c.getNameCurrency();
+            }
+        }
+        return s;
+    }
+    public Double getValu(String s){
+        for (Currency c:currencie){
+            if (c.getDrzava().equals(s)){
+                return c.getCena();
+            }
+        }
+        return 0.0;
+    }
+    public Collection<Currency>getdrzavezalistu(String s){
+        Set<Currency> res=new LinkedHashSet<>();
+        for (Currency c:currencie){
+            if (c.getDrzava().contains(s)){
+                res.add(c);
+            }
+        }
+        return res;
+    }
+
+
+    public List<Currency> getCurrencie() {
+        return currencie;
     }
 }

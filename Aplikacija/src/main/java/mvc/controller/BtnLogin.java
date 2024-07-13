@@ -5,7 +5,7 @@ import javafx.event.EventHandler;
 import javafx.scene.control.Alert;
 import mvc.model.FileDataBase;
 import mvc.view.LoginStage;
-import mvc.view.MainStage;
+import mvc.view.CurrencyStage;
 
 public class BtnLogin implements EventHandler<ActionEvent> {
     private LoginStage loginStage;
@@ -27,8 +27,9 @@ public class BtnLogin implements EventHandler<ActionEvent> {
             Alert alert=new Alert(Alert.AlertType.CONFIRMATION,"Uspesno ste se loginali");
             alert.showAndWait();
             loginStage.close();
-            MainStage mainStage=MainStage.getInstance();
-            mainStage.show();
+            CurrencyStage currencyStage = CurrencyStage.getInstance();
+            currencyStage.inserCbDrzave(fileDataBase.getDrzave());
+            currencyStage.show();
         }else {
             Alert alert=new Alert(Alert.AlertType.ERROR,"Korisnik ne postoji, napravite nalog!");
             alert.showAndWait();

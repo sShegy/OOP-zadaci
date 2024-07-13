@@ -6,5 +6,7 @@ module Aplikacija {
     requires java.desktop;
     exports mvc;
     exports mvc.view;
+    exports mvc.controller;
+    exports mvc.model;
 
 }

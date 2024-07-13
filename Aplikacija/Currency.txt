@@ -1,0 +1,152 @@
+3.6725;AED;United Arab Emirates
+109.918;AFN;Afghanistan
+127.647;ALL;Albania
+28.799;AMD;Armenia
+60.220;ANG;Netherlands Antillean Guilder
+0.2315;AOA;Angola
+43.354;ARS;Argentina
+72.8431;AUD;Australia
+59.127;AWG;Aruba
+63.630;AZN;Azerbaijan
+59.8438;BAM;Bosnia and Herzegovina
+53.205;BBD;Barbados
+1.1773;BDT;Bangladesh
+59.8438;BHD;Bahrain
+116.570;BIF;Burundi
+107.647;USD;America
+0.1349;BMD;Bermuda
+79.489;BND;Brunei
+54.711;BOB;Bolivia
+21.728;BRL;Brazil
+107.647;BSD;Bahamas
+107.000;BTN;Bhutan
+12.234;BWP;Botswana
+6.395;BYN;Belarus
+53.205;BZD;Belize
+79.0306;CAD;Canada
+0.67664;CNY;China
+15.036;CDF;Democratic Republic of the Congo
+12.582;CLP;Chile
+120.119;CHF;Switzerland
+0.1173;COP;Colombia
+0.1448;CRC;Costa Rica
+15.473;CUP;Cuba
+70.372;CVE;Cape Verde
+4.332;CZK;Czech Republic
+20.067;DJF;Djibouti
+16.122;DKK;Denmark
+61.504;DOP;Dominican Republic
+8.127;DZD;Algeria
+9.394;EGP;Egypt
+1.179;ERN;Eritrea
+56.812;ETB;Ethiopia
+117.028;EUR;Eurozone
+13.223;FJD;Fiji
+16.934;FKP;Falkland Islands
+138.958;GBP;United Kingdom
+47.312;GEL;Georgia
+138.958;GGP;Guernsey
+20.392;GHS;Ghana
+138.958;GIP;Gibraltar
+10.598;GMD;Gambia
+12.046;GNF;Guinea
+15.229;GTQ;Guatemala
+56.524;GYD;Guyana
+107.647;HKD;Hong Kong
+107.647;HNL;Honduras
+15.36;HRK;Croatia
+1.179;HTG;Haiti
+0.29704;HUF;Hungary
+7.172;IDR;Indonesia
+34.361;ILS;Israel
+138.958;IMP;Isle of Man
+0.8361;INR;India
+0.1681;IQD;Iraq
+130.512;IRR;Iran
+1.097;ISK;Iceland
+138.958;JEP;Jersey
+107.647;JMD;Jamaica
+152.648;JOD;Jordan
+0.67664;JPY;Japan
+1.0145;KES;Kenya
+1.097;KGS;Kyrgyzstan
+24.787;KHR;Cambodia
+13.225;KMF;Comoros
+9.015;KPW;North Korea
+80.675;KRW;South Korea
+351.358;KWD;Kuwait
+128.248;KYD;Cayman Islands
+20.392;KZT;Kazakhstan
+1.406;LAK;Laos
+0.157;LBP;Lebanon
+0.3407;LKR;Sri Lanka
+74.032;LRD;Liberia
+7.012;LSL;Lesotho
+13.026;LYD;Libya
+0.1576;MAD;Morocco
+6.964;MDL;Moldova
+27.158;MGA;Madagascar
+3.150;MKD;North Macedonia
+51.676;MMK;Myanmar
+37.139;MNT;Mongolia
+1.415;MOP;Macau
+4.756;MRU;Mauritania
+2.471;MUR;Mauritius
+7.012;MVR;Maldives
+16.457;MWK;Malawi
+5.645;MXN;Mexico
+0.6752;MYR;Malaysia
+6.246;MZN;Mozambique
+7.518;NAD;Namibia
+18.739;NGN;Nigeria
+7.282;NIO;Nicaragua
+12.002;NOK;Norway
+1.0385;NPR;Nepal
+48.219;NZD;New Zealand
+25.241;OMR;Oman
+107.647;PAB;Panama
+29.146;PEN;Peru
+26.342;PGK;Papua New Guinea
+3.837;PHP;Philippines
+30.184;PKR;Pakistan
+26.435;PLN;Poland
+107.647;PYG;Paraguay
+107.647;QAR;Qatar
+23.812;RON;Romania
+1.23000;RUB;Russia
+1.179;RWF;Rwanda
+107.647;SAR;Saudi Arabia
+14.392;SBD;Solomon Islands
+13.091;SCR;Seychelles
+11.471;SDG;Sudan
+10.457;SEK;Sweden
+79.0306;SGD;Singapore
+53.205;SHP;Saint Helena
+14.935;SLL;Sierra Leone
+53.205;SVC;El Salvador
+2.202;SYP;Syria
+3.517;SZL;Eswatini
+3.353;THB;Thailand
+0.9767;TJS;Tajikistan
+31.567;TMT;Turkmenistan
+34.135;TND;Tunisia
+53.657;TOP;Tonga
+10.782;TRY;Turkey
+15.172;TTD;Trinidad and Tobago
+3.853;TWD;Taiwan
+237.567;TZS;Tanzania
+29.146;UAH;Ukraine
+8.371;UGX;Uganda
+107.647;USD;United States
+3.592;UYU;Uruguay
+123.147;UZS;Uzbekistan
+0.0046;VND;Vietnam
+11.028;VUV;Vanuatu
+25.787;WST;Samoa
+2.386;XAF;Central African CFA Franc
+107.647;XCD;East Caribbean Dollar
+2.386;XOF;West African CFA Franc
+1.174;XPF;CFP Franc
+6.359;YER;Yemen
+0.1473;ZAR;South Africa
+15.17;ZMW;Zambia
