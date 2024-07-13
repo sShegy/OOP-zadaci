@@ -2,9 +2,7 @@ package mvc;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
-import mvc.view.MainStage;
-
-import java.io.File;
+import mvc.view.LoginStage;
 
 public class Main extends Application {
     public static void main(String[] args) {
@@ -12,7 +10,7 @@ public class Main extends Application {
     }
     @Override
     public void start(Stage stage) throws Exception {
-        MainStage mainStage=MainStage.getInstance();
-        mainStage.show();
+        LoginStage loginStage = LoginStage.getInstance();
+        loginStage.show();
     }
 }

@@ -3,15 +3,15 @@ package mvc.controller;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import mvc.model.FileDataBase;
-import mvc.view.MainStage;
+import mvc.view.LoginStage;
 import mvc.view.SingUpStage;
 
 public class BtnSing implements EventHandler<ActionEvent> {
     private SingUpStage stage=SingUpStage.getInstance();
-    private MainStage mainStage;
+    private LoginStage loginStage;
 
-    public BtnSing(MainStage mainStage) {
-        this.mainStage = mainStage;
+    public BtnSing(LoginStage loginStage) {
+        this.loginStage = loginStage;
     }
 
     @Override
@@ -19,7 +19,7 @@ public class BtnSing implements EventHandler<ActionEvent> {
          FileDataBase f=FileDataBase.getInstance();
         SingUpStage singUpStage=SingUpStage.getInstance();
 
-        mainStage.close();
+        loginStage.close();
         singUpStage.show();
 
     }

@@ -4,66 +4,83 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class FileDataBase {
     private static FileDataBase instance;
 
-    private final String User= "User.txt";
+    private final String USER_FILE = "User.txt";
 
-    private List<User>user=new ArrayList<>();
+    private List<User> user = new ArrayList<>();
 
-    private FileDataBase(){
+    private FileDataBase() {
         ucitajUsers();
     }
-    public static FileDataBase getInstance(){
-        if (instance==null){
-            instance=new FileDataBase();
+
+    public static FileDataBase getInstance() {
+        if (instance == null) {
+            instance = new FileDataBase();
         }
         return instance;
     }
-    public boolean Useexiat(User u){
-        for (mvc.model.User r:user){
-            if (r.getAge().equals(u.getAge())){
-                return true;
+
+    public boolean useExist(User u) {
+        for (User r : user) {
+            if (r.getEmail().equals(u.getEmail())) {
+                if (r.getPassword().equals(u.getPassword())) {
+                    return true;
+                }
             }
         }
         return false;
     }
-    public void getUserInList(User u){
+
+    public boolean userExist(String email, String password) {
+        for (User u : user) {
+            if (u.getEmail().equals(email)) {
+                System.out.println("Email postoji");
+                if (u.getPassword().equals(password)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public void getUserInList(User u) {
         user.add(u);
     }
 
-    private void ucitajUsers(){
-    try {
-        FileReader fr=new FileReader(User);
-        BufferedReader bw=new BufferedReader(fr);
-        String line= bw.readLine();
-        while (line!=null){
-            mvc.model.User u= mvc.model.User.getParstUser(line);
-            System.out.printf(u.toString());
-            user.add(u);
-            line= bw.readLine();
+    private void ucitajUsers() {
+        try (BufferedReader br = new BufferedReader(new FileReader(USER_FILE))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                if (line.trim().isEmpty()) {
+                    continue;  // Skip empty lines
+                }
+                User u = User.getParstUser(line);
+                if (u != null) {
+                    System.out.println(u.toString());
+                    user.add(u);
+                }
+            }
+        } catch (FileNotFoundException e) {
+            System.err.println("User file not found: " + USER_FILE);
+            e.printStackTrace();
+        } catch (IOException e) {
+            System.err.println("Error reading user file: " + USER_FILE);
+            e.printStackTrace();
         }
-
-    } catch (FileNotFoundException e) {
-        throw new RuntimeException(e);
-    } catch (IOException e) {
-        throw new RuntimeException(e);
-    }
     }
 
-    public boolean eculEmail(User u){
-        for (mvc.model.User t:user){
-            if (t.getEmail().equals(u.getEmail())){
+
+    public boolean emailExists(User u) {
+        for (User t : user) {
+            if (t.getEmail().equals(u.getEmail())) {
                 return true;
             }
         }
         return false;
     }
-
-
-
-
 }

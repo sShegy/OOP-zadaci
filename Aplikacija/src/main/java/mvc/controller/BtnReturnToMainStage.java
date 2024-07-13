@@ -2,7 +2,7 @@ package mvc.controller;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import mvc.view.MainStage;
+import mvc.view.LoginStage;
 import mvc.view.SingUpStage;
 
 public class BtnReturnToMainStage implements EventHandler<ActionEvent> {
@@ -15,9 +15,9 @@ public class BtnReturnToMainStage implements EventHandler<ActionEvent> {
 
     @Override
     public void handle(ActionEvent actionEvent) {
-        MainStage mainStage=MainStage.getInstance();
+        LoginStage loginStage = LoginStage.getInstance();
         SingUpStage.getInstance().close();
-        mainStage.show();
+        loginStage.show();
 
     }
 }
