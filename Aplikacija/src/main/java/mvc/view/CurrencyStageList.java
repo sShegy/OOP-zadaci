@@ -25,7 +25,7 @@ public class CurrencyStageList extends Stage {
     private ComboBox<String>cbDrzava=new ComboBox<>();
 
     private Button btnFilter=new Button("Filter");
-    private Button btnUzim=new Button("Uzmi valtu i konvertuj");
+    private Button btnUzim=new Button("Uzmi valutu i konvertuj");
     private Button btnRemoveFIlter=new Button("Skloni filer");
 
     private CurrencyStageList() {

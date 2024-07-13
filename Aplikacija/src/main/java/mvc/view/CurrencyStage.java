@@ -59,7 +59,7 @@ public class CurrencyStage extends Stage {
         vb1.setSpacing(5);
         vb1.getChildren().addAll(hb1,hb2);
 
-        Scene scene=new Scene(vb1,500,600);
+        Scene scene=new Scene(vb1,800,300);
         super.setScene(scene);
 
     }

@@ -21,19 +21,21 @@ public class BtnLogin implements EventHandler<ActionEvent> {
         if (!email.contains("@gmail.com")){
             Alert alert=new Alert(Alert.AlertType.ERROR,"Pogresan unos emaila!!!");
             alert.showAndWait();
-        }
-        String password= loginStage.getPsPassword().getText();
-        if (fileDataBase.userExist(email,password)){
-            Alert alert=new Alert(Alert.AlertType.CONFIRMATION,"Uspesno ste se loginali");
-            alert.showAndWait();
-            loginStage.close();
-            CurrencyStage currencyStage = CurrencyStage.getInstance();
-            currencyStage.inserCbDrzave(fileDataBase.getDrzave());
-            currencyStage.show();
         }else {
-            Alert alert=new Alert(Alert.AlertType.ERROR,"Korisnik ne postoji, napravite nalog!");
-            alert.showAndWait();
+            String password= loginStage.getPsPassword().getText();
+            if (fileDataBase.userExist(email,password)){
+                Alert alert=new Alert(Alert.AlertType.CONFIRMATION,"Uspesno ste se loginali");
+                alert.showAndWait();
+                loginStage.close();
+                CurrencyStage currencyStage = CurrencyStage.getInstance();
+                currencyStage.inserCbDrzave(fileDataBase.getDrzave());
+                currencyStage.show();
+            }else {
+                Alert alert=new Alert(Alert.AlertType.ERROR,"Korisnik ne postoji, napravite nalog!");
+                alert.showAndWait();
+            }
         }
+
 
     }
 }
