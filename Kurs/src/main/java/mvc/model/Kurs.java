@@ -13,7 +13,7 @@ public class Kurs {
         this.trajanje = trajanje;
     }
 
-
+//data
 
     public static Kurs parsetKurs(String input){
         //Introduction to Web Development,Technology>480 minutes:$99
