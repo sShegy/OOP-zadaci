@@ -26,6 +26,7 @@ public class BtnLista implements EventHandler<ActionEvent> {
             alert.showAndWait();
             return;
         }
+        
         currencyStageListF.insertTabela(fileDataBase.getCurrencie());
         currencyStageListF.insertcb(fileDataBase.getDrzave());
         currency.close();
