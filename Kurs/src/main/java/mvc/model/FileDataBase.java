@@ -11,7 +11,7 @@ import java.util.*;
 public class FileDataBase {
     private static FileDataBase instance;
 
-    private final String Kurs="C:\\Users\\computer\\OneDrive\\Desktop\\OOP\\OOP-zadaci\\Kurs\\RAF_Coursera.txt";
+    private final String Kurs="E:\\OOP-zadaci\\Kurs\\RAF_Coursera.txt";
 
     private static int Dzeparac;
     private int ime;
@@ -32,6 +32,7 @@ public class FileDataBase {
         }
         return instance;
     }
+
     public boolean Kursexist(Kurs kurs){
         for (Kurs k:odabranikurs){
             if (k.equals(kurs)){
@@ -40,6 +41,7 @@ public class FileDataBase {
         }
             return false;
     }
+
     public boolean Kategorijaexist(Kategorija t){
         for (Kategorija k:dadada){
             if (k.getNaziv().equals(t.getNaziv())){
@@ -56,6 +58,7 @@ public class FileDataBase {
         }
         return sat;
     }
+
     public Collection<Integer>getMinute(){
         Set<Integer>sat=new LinkedHashSet<>();
         for (int i=0;i<=60;i=i+5){
@@ -63,6 +66,7 @@ public class FileDataBase {
         }
         return sat;
     }
+
     public Collection<Kategorija>getKategorija(){
         Set<Kategorija>sat=new LinkedHashSet<>();
         for (Kategorija k:dadada){
