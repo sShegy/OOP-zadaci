@@ -22,7 +22,7 @@ public class BtnBet implements EventHandler<ActionEvent> {
         ImageView imageView2 = rockPaperScissors.getImageView2();
         String result;
 
-        // Check if choices match the images (assuming image URLs are set to the choices)
+
         boolean player1ImageMatch = player1Choice.equals(getChoiceFromImageView(imageView1));
         boolean player2ImageMatch = player2Choice.equals(getChoiceFromImageView(imageView2));
 
