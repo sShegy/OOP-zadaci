@@ -19,11 +19,11 @@ public class BtnIgraj implements EventHandler<ActionEvent> {
         String r = rockPaperScissors.getCbIzaberi(player).getSelectionModel().getSelectedItem();
 
         if (r.equals("Rock")) {
-            rockPaperScissors.setImage(player, new Image("file:/E:/OOP-zadaci/Aplikacija/images/Screenshot_3.png"));
+            rockPaperScissors.setImage(player, new Image("file:/E:/OOP-zadaci/Aplikacija/images/Rock.png"));
         } else if (r.equals("Paper")) {
-            rockPaperScissors.setImage(player, new Image("file:/E:/OOP-zadaci/Aplikacija/images/Screenshot_1.png"));
+            rockPaperScissors.setImage(player, new Image("file:/E:/OOP-zadaci/Aplikacija/images/Paper.png"));
         } else {
-            rockPaperScissors.setImage(player, new Image("file:/E:/OOP-zadaci/Aplikacija/images/Screenshot_2.png"));
+            rockPaperScissors.setImage(player, new Image("file:/E:/OOP-zadaci/Aplikacija/images/Scissors.png"));
         }
     }
 }
