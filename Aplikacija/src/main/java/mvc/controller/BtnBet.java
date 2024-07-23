@@ -34,8 +34,10 @@ public class BtnBet implements EventHandler<ActionEvent> {
                 (player1Choice.equals("Paper") && player2Choice.equals("Rock")) ||
                 (player1Choice.equals("Scissors") && player2Choice.equals("Paper"))) {
             result = "Player 1 wins!";
+            RockPaperScissors.getInstance().getLbVecemanje().setText(">");
         } else {
             result = "Player 2 wins!";
+            RockPaperScissors.getInstance().getLbVecemanje().setText("<");
         }
 
         Alert alert = new Alert(AlertType.INFORMATION);

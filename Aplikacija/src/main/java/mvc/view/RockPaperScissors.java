@@ -4,6 +4,7 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
@@ -20,6 +21,7 @@ public class RockPaperScissors extends Stage {
     private Button btnIgraj1 = new Button("Igraj");
     private ImageView imageView1 = new ImageView();
     private ComboBox<String> cbIzaberi1 = new ComboBox<>();
+    private Label lbVecemanje=new Label();
 
     private Button btnIgraj2 = new Button("Igraj");
     private ImageView imageView2 = new ImageView();
@@ -92,7 +94,7 @@ public class RockPaperScissors extends Stage {
         HBox hbox = new HBox();
         hbox.setAlignment(Pos.CENTER);
         hbox.setSpacing(100);
-        hbox.getChildren().addAll(vb1, vb2, btnBet);
+        hbox.getChildren().addAll(vb1,lbVecemanje, vb2, btnBet);
 
         Scene scene = new Scene(hbox, 1000, 600);
         this.setScene(scene);
@@ -124,5 +126,9 @@ public class RockPaperScissors extends Stage {
 
     public ComboBox<String> getCbIzaberi2() {
         return cbIzaberi2;
+    }
+
+    public Label getLbVecemanje() {
+        return lbVecemanje;
     }
 }
