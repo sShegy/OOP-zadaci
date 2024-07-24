@@ -35,7 +35,7 @@ public class RockPaperScissors extends Stage {
 
     private void ucitajSliku1() {
         try {
-            String imagePath = "file:/E:/OOP-zadaci/Aplikacija/images/Rock.png";
+            String imagePath = "file:/Users/shegy/Documents/GitHub/OOP-zadaci/Aplikacija/images/Rock.png";
             Image image1 = new Image(imagePath);
             imageView1.setImage(image1);
             imageView1.setFitWidth(100);
@@ -48,7 +48,7 @@ public class RockPaperScissors extends Stage {
 
     private void ucitajSliku2() {
         try {
-            String imagePath = "file:/E:/OOP-zadaci/Aplikacija/images/Paper.png";
+            String imagePath = "file:/Users/shegy/Documents/GitHub/OOP-zadaci/Aplikacija/images/Paper.png";
             Image image2 = new Image(imagePath);
             imageView2.setImage(image2);
             imageView2.setFitWidth(100);
