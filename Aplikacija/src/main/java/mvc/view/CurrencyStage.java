@@ -6,6 +6,7 @@ import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import mvc.controller.BtnBack2;
 import mvc.controller.BtnKonvertuj;
 import mvc.controller.BtnLista;
 
@@ -23,6 +24,8 @@ public class CurrencyStage extends Stage {
     private Label lbImeValute=new Label();
     private Label lbDrzava=new Label();
 
+    private Button btnBack=new Button("Back");
+
     private Button btnPrebaci=new Button("Konvertuj");
     private Button btnLista=new Button("Tabela Currency");
     private CurrencyStage(){
@@ -39,6 +42,7 @@ public class CurrencyStage extends Stage {
 
         btnPrebaci.setOnAction(new BtnKonvertuj(this));
         btnLista.setOnAction(new BtnLista(this));
+        btnBack.setOnAction(new BtnBack2(this));
 
         txKrajnaCena.setEditable(false);
 
@@ -57,7 +61,7 @@ public class CurrencyStage extends Stage {
         VBox vb1=new VBox();
         vb1.setAlignment(Pos.CENTER);
         vb1.setSpacing(5);
-        vb1.getChildren().addAll(hb1,hb2);
+        vb1.getChildren().addAll(hb1,hb2,btnBack);
 
         Scene scene=new Scene(vb1,800,300);
         super.setScene(scene);

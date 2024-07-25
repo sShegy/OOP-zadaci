@@ -1,5 +1,6 @@
 package mvc.view;
 
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -10,6 +11,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import mvc.controller.BtnBack;
+import mvc.controller.BtnBack2;
 import mvc.controller.BtnBet;
 import mvc.controller.BtnIgraj;
 
@@ -26,6 +29,8 @@ public class RockPaperScissors extends Stage {
     private Button btnIgraj2 = new Button("Igraj");
     private ImageView imageView2 = new ImageView();
     private ComboBox<String> cbIzaberi2 = new ComboBox<>();
+
+    private Button btnBack=new Button("Back");
 
     private RockPaperScissors() {
         init();
@@ -68,6 +73,13 @@ public class RockPaperScissors extends Stage {
 
     private void init() {
         btnBet.setOnAction(new BtnBet(this));
+        btnBack.setOnAction(new BtnBack(this));
+
+
+        HBox hb1=new HBox();
+        hb1.setAlignment(Pos.TOP_RIGHT);
+        hb1.setPadding(new Insets(2));
+        hb1.getChildren().addAll(btnBack);
 
         VBox vb1 = new VBox();
         vb1.setAlignment(Pos.CENTER);
@@ -94,9 +106,14 @@ public class RockPaperScissors extends Stage {
         HBox hbox = new HBox();
         hbox.setAlignment(Pos.CENTER);
         hbox.setSpacing(100);
-        hbox.getChildren().addAll(vb1,lbVecemanje, vb2, btnBet);
+        hbox.getChildren().addAll(hb1,vb1,lbVecemanje, vb2, btnBet);
 
-        Scene scene = new Scene(hbox, 1000, 600);
+        VBox root = new VBox();
+        root.setAlignment(Pos.CENTER);
+        root.setSpacing(100);
+        root.getChildren().addAll(hb1,hbox);
+
+        Scene scene = new Scene(root, 1000, 600);
         this.setScene(scene);
     }
 
