@@ -30,6 +30,7 @@ public class BtnBet implements EventHandler<ActionEvent> {
             result = "Image and choice mismatch! Please make sure the images match your choices.";
         } else if (player1Choice.equals(player2Choice)) {
             result = "It's a tie!";
+            RockPaperScissors.getInstance().getLbVecemanje().setText("=");
         } else if ((player1Choice.equals("Rock") && player2Choice.equals("Scissors")) ||
                 (player1Choice.equals("Paper") && player2Choice.equals("Rock")) ||
                 (player1Choice.equals("Scissors") && player2Choice.equals("Paper"))) {
