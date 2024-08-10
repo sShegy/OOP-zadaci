@@ -1,14 +1,18 @@
 package mvc.view;
 
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import mvc.controller.BtnBack;
+import mvc.controller.BtnBack2;
 import mvc.controller.BtnBet;
 import mvc.controller.BtnIgraj;
 
@@ -20,10 +24,13 @@ public class RockPaperScissors extends Stage {
     private Button btnIgraj1 = new Button("Igraj");
     private ImageView imageView1 = new ImageView();
     private ComboBox<String> cbIzaberi1 = new ComboBox<>();
+    private Label lbVecemanje=new Label();
 
     private Button btnIgraj2 = new Button("Igraj");
     private ImageView imageView2 = new ImageView();
     private ComboBox<String> cbIzaberi2 = new ComboBox<>();
+
+    private Button btnBack=new Button("Back");
 
     private RockPaperScissors() {
         init();
@@ -33,7 +40,7 @@ public class RockPaperScissors extends Stage {
 
     private void ucitajSliku1() {
         try {
-            String imagePath = "file:/E:/OOP-zadaci/Aplikacija/images/Rock.png";
+            String imagePath = "file:/Users/shegy/Documents/GitHub/OOP-zadaci/Aplikacija/images/Rock.png";
             Image image1 = new Image(imagePath);
             imageView1.setImage(image1);
             imageView1.setFitWidth(100);
@@ -46,7 +53,7 @@ public class RockPaperScissors extends Stage {
 
     private void ucitajSliku2() {
         try {
-            String imagePath = "file:/E:/OOP-zadaci/Aplikacija/images/Paper.png";
+            String imagePath = "file:/Users/shegy/Documents/GitHub/OOP-zadaci/Aplikacija/images/Paper.png";
             Image image2 = new Image(imagePath);
             imageView2.setImage(image2);
             imageView2.setFitWidth(100);
@@ -66,6 +73,13 @@ public class RockPaperScissors extends Stage {
 
     private void init() {
         btnBet.setOnAction(new BtnBet(this));
+        btnBack.setOnAction(new BtnBack(this));
+
+
+        HBox hb1=new HBox();
+        hb1.setAlignment(Pos.TOP_RIGHT);
+        hb1.setPadding(new Insets(2));
+        hb1.getChildren().addAll(btnBack);
 
         VBox vb1 = new VBox();
         vb1.setAlignment(Pos.CENTER);
@@ -92,9 +106,14 @@ public class RockPaperScissors extends Stage {
         HBox hbox = new HBox();
         hbox.setAlignment(Pos.CENTER);
         hbox.setSpacing(100);
-        hbox.getChildren().addAll(vb1, vb2, btnBet);
+        hbox.getChildren().addAll(hb1,vb1,lbVecemanje, vb2, btnBet);
 
-        Scene scene = new Scene(hbox, 1000, 600);
+        VBox root = new VBox();
+        root.setAlignment(Pos.CENTER);
+        root.setSpacing(100);
+        root.getChildren().addAll(hb1,hbox);
+
+        Scene scene = new Scene(root, 1000, 600);
         this.setScene(scene);
     }
 
@@ -124,5 +143,9 @@ public class RockPaperScissors extends Stage {
 
     public ComboBox<String> getCbIzaberi2() {
         return cbIzaberi2;
+    }
+
+    public Label getLbVecemanje() {
+        return lbVecemanje;
     }
 }
