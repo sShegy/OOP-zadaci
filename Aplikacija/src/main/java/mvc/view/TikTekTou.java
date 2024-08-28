@@ -180,6 +180,8 @@ public class TikTekTou extends Stage {
             resetGame();
         } else {
             this.close();
+            Meni meni=Meni.getInstance();
+            meni.show();
         }
     }
 
