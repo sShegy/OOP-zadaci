@@ -1,5 +1,0 @@
-Lazar;Prezime;we@gmail.com;123;14/7/2024;Female
-MIlan;dadasd;qw@gmail.com;123;15/7/2024;Male
-Milan;dsada;ma@gmail.com;123;23/7/2024;Male
-Milan;Sega;rt@gmail.com;123;08/7/2024;Female
-Teodora;Segan;teodorasegann@gmail.com;teodoraa;28/3/2011;Female
